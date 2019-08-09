@@ -98,7 +98,7 @@ class Boleto:                                                  #Cria a classe "B
     def __str__(self):
         return self._extrato
 
-############################ Teste ###############################
+############################ Teste ################################
 
 boleto = 'nubank-2019-07.csv'
 teste = Boleto(boleto)
