@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>                                                              <!--Início do código HTML-->
+	<head>                                                          <!--Início do cabeçalho-->
+		<title>NuPython</title>                                     <!--Título-->
+		<meta charset="utf-8">                                      <!--Definindo ................-->
+
+	</head>                                                         <!--Fim do cabeçalho-->
+
+	<body>                                                          <!--Início do corpo do texto-->
+		<main>
+			<h1>NuConta Crédito</h1>                                <!--Sub-título 1-->
+
+			<h2>Extrato Total de {{ data }} </h2>                   <!--Sub-título 2-->
+
+            <table>                                                 <!--Início de uma tabela-->
+                <theard>                                            <!--Início do cabeçalho da tabela-->
+				    <tr>
+					    <th>Data</th>
+					    <th>Categoria</th>
+					    <th>Identificação</th>
+					    <th>Valor</th>
+				    </tr>
+			    </theard>                                          <!--Fim do cabeçalho da tabela-->
+			    <tbody>                                            <!--Início do corpo da tabela-->
+                {% for transacao in extrato %}
+                    {% if 1 == 1 %}
+                        <tr>
+                            <td>{{ transacao.data }}</td>
+                            <td> 1 </td>
+                            <td> 2 </td>
+                            <td>{{ transacao.valor }}</td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td>{{ transacao.data }}</td>
+                            <td> 1 </td>
+                            <td>{{ transacao.valor }}</td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+			    </tbody>                                                           <!--Fim do corpo da tabela-->
+            </table>                                                               <!--Fim de uma tabela-->
+
+
+			<p>Segundo <a href="https:\\www.nubank.com.br">Nubank</a></p>
+
+            <h3>Quantidade de Transações do Mês</h3>                               <!--Sub-título 3-->
+
+				<p>{{ quantidade }}</p>
+
+			<h4>Valor Total da Categoria {{ categoria }}</h4>                      <!--Sub-título 4-->
+
+				<p> {{ valorCategoria }}</p>
+
+			<h5>Transações referentes a {{ Data }}</h5>                            <!--Subtítulo 5-->
+            <table>                                                                <!--Início de uma tabela-->
+                <thead>                                                            <!--Início do cabeçalho da tabela-->
+                    <tr>
+                        <th> Data </th>
+                        <th> Categoria </th>
+                        <th> Referência </th>
+                        <th> Valor </th>
+                    </tr>
+                </thead>                                                           <!--Fim do cabeçalho da tabela-->
+                <tbody>                                                            <!--Início do corpo da tabela-->
+                {% for transacao in transacoesData %}
+                    <tr>
+                        <td>{{ transacao.data }} </td>
+                        <td> 1 </td>
+                        <td> 2 </td>
+                        <td>{{ transacao.valor }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>                                                           <!--Fim do corpo da tabela-->
+            </table>                                                               <!--Fim de uma tabela-->
+		</main>
+		<nav>                                                                      <!--Início da caixa de navegação-->
+			<h1>Alex Lorenz</h1>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Teste</a></li>
+			</ul>	
+		</nav>                                                                      <!--Fim da caixa de navegação-->
+		<footer>                                                                    <!--Início do rodapé-->
+			&copy; Alex Lorenz 2019
+		</footer>                                                                   <!--Fim do rodapé-->
+	</body>                                                                         <!--Fim do corpo do texto-->
+</html>                                                                             <!--Fim do código HTML-->
