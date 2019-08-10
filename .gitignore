@@ -6,3 +6,6 @@ nubank-2019-05.csv
 nubank-2019-06.csv
 nubank-2019-07.csv
 .idea/
+.vs/
+__pycache__/
+venv/
