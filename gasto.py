@@ -19,7 +19,7 @@ class Gasto:                                                     #Cria a classe 
 
     @property                                                    #
     def valor(self):                                             #Cria o método "valor"
-        return self._valor
+        return float(self._valor)
 
     def __str__(self):                                           #Chama o metodo builtin "__str__" que retorna algo quando a classe é chamada
         return self._data + ' | ' \

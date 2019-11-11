@@ -99,6 +99,18 @@ class Boleto:                                                  #Cria a classe "B
 
         return round((soma * -1), 2)
 
+    def maiorGasto(self):
+        valor = 0
+        for line in self._transacoes:
+            if type(line) == Gasto and line.valor > valor:
+                valor = line.valor
+                gasto = line
+
+            else:
+                continue
+
+        return gasto
+
     def valorTransacoesPorCategoria(self, categoria):         #Cria o método "valorTransacoesPorCategoria" e recebe "categoria" como parâmetro
         soma = 0
 
@@ -121,7 +133,7 @@ class Boleto:                                                  #Cria a classe "B
 
 boleto = 'nubank-2019-03.csv'
 teste = Boleto(boleto)
-print(teste)
+#print(teste)
 
 for item in teste.lista:
     print(item)
@@ -131,11 +143,12 @@ for item in teste.lista:
 
 #teste.mostraExtrato()
 
-print(teste.valorGastoTotal())
-print(teste.valorPagoTotal())
+#print(teste.valorGastoTotal())
+#print(teste.valorPagoTotal())
+print(teste.maiorGasto())
 
-categoria = 'transporte'
-print(teste.valorTransacoesPorCategoria(categoria))
+#categoria = 'transporte'
+#print(teste.valorTransacoesPorCategoria(categoria))
 
 #print(teste.quantidadeTransacoes())
 
