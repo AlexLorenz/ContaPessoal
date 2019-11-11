@@ -33,7 +33,7 @@ def ola():
                            data = '2019-07',
                            quantidade= extrato.quantidadeTransacoes(),
                            extrato = lista,
-                           categoria=categoria3,
+                           categoria=categoria3.capitalize(),
                            valorCategoria=extrato.valorTransacoesPorCategoria(categoria3),
                            Data=data,
                            transacoesData= extrato.mostraTransacoesPorData(data))
@@ -42,5 +42,3 @@ app.run()
 
 
 #################### Teste ########################
-
-#print(lista[0])

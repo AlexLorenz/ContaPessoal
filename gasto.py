@@ -11,7 +11,7 @@ class Gasto:                                                     #Cria a classe 
 
     @property                                                    #
     def categoria(self):                                         #Cria o método "categoria"
-        return self._categoria                                   #Retorna a variável "categoria"
+        return (str(self._categoria)).capitalize()               #Retorna a variável "categoria" com a primeira letra maiuscula
 
     @property                                                    #
     def referencia(self):                                        #Cria o método "referencia"
