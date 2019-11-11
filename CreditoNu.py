@@ -55,6 +55,10 @@ class Boleto:                                                  #Cria a classe "B
     def lista(self):                                           #Cria o método "lista"
         return self._transacoes                                #Retorna a Lista "transacoes"
 
+    @property
+    def extrato(self):
+        return self._extrato
+
     def mostraTransacoesPorData(self, data):                   #Cria o método "mostraTransacoesPorData" e recebe "data" como parâmetro
         linha = 0
         existe = 0
@@ -108,10 +112,10 @@ class Boleto:                                                  #Cria a classe "B
 
 boleto = 'nubank-2019-07.csv'
 teste = Boleto(boleto)
-#print(teste)
+print(teste)
 
-#for item in teste.lista:
-#    print(item)
+for item in teste.lista:
+    print(item)
 
 #data = '2019-07-02'
 #print(teste.mostraTransacoesPorData(data))
