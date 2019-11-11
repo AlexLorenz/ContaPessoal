@@ -1,7 +1,6 @@
 from gasto import Gasto                                         #Importa a classe "Gasto" do diretório "gasto"
 from pagamento import Pagamento                                 #Importa a classe "Pagamento" do diretório "pagamento"
 
-
 class Boleto:                                                  #Cria a classe "Boleto"
     def __init__(self, extrato):                                #Cria o método construtor solicitando o parâmetro 'extrato'
         self._extrato = extrato
@@ -15,7 +14,10 @@ class Boleto:                                                  #Cria a classe "B
         boleto = boleto.replace('educaÃ§Ã£o', 'educacao')       #Troca "educaÃ§Ã£o" por "educacao"
         boleto = boleto.replace('serviÃ§os', 'servicos')        #Troca "serviÃ§os" por "servicos"
 
+
         listaBoleto = boleto.split('\n')                        #Variável "listaBoleto" recebe "boleto" separado por "\n", o que torna "listaBoleto" uma Lista
+        #print(listaBoleto)
+
         del(listaBoleto[0])
 
         lista = []                                              #Cria a variável "lista" que recebe uma Lista vazia
@@ -26,6 +28,8 @@ class Boleto:                                                  #Cria a classe "B
                                                                 # Lista "listaBoleto"
 
             lista.append(transacao)                             #Adiciona "transacao" a Lista "lista"
+
+        #print(lista)
 
         n = 0
         self._transacoes = []                                   #Cria a varíavel "transacoes" de forma que todas os métodos tenham acesso a ela(self.) e de maneita que só
@@ -86,7 +90,9 @@ class Boleto:                                                  #Cria a classe "B
         soma = 0
 
         for line in self._transacoes:                         #Para cada line(cada item) na Lista "transacoes"
-            if line is Gasto:
+            #print(type(line))
+            if type(line) is Gasto:
+                #print('true')
                 if line.categoria == categoria:                   #Se .................
                     soma = soma + float(line.valor)               #..................
 

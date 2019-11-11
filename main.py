@@ -1,8 +1,8 @@
 from flask import Flask, render_template                      #Importa a biblioteca do microframework Flask do diretório "flask"
 from CreditoNu import Boleto                                  #Imposta a classe "Boleto" do diretório "CreditoNu"
 
-boleto = 'nubank-2019-07.csv'                                 #Especifíca o título do arquivo que será extraído
-data = '2019-07-02'                                           #Especifíca a data que será pesquisada
+boleto = 'nubank-2019-03.csv'                                 #Especifíca o título do arquivo que será extraído
+data = '2019-02-11'                                           #Especifíca a data que será pesquisada
 
 categoria1 = 'restaurante'                                    #Especifíca a categoria 1
 categoria2 = 'servicos'                                       #   //      //  //      2
@@ -34,7 +34,7 @@ def ola():
                            quantidade= extrato.quantidadeTransacoes(),
                            extrato = lista,
                            categoria=categoria1,
-                           valorCategoria="valor por categoria",
+                           valorCategoria=extrato.valorTransacoesPorCategoria(categoria1),
                            Data=data,
                            transacoesData= extrato.mostraTransacoesPorData(data))
 
