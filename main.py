@@ -33,6 +33,7 @@ def ola():
                            data = '2019-07',
                            quantidade= extrato.quantidadeTransacoes(),
                            extrato = lista,
+                           valorTotalGasto = extrato.valorGastoTotal(),
                            categoria=categoria3.capitalize(),
                            valorCategoria=extrato.valorTransacoesPorCategoria(categoria3),
                            Data=data,
