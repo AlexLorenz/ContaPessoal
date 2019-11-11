@@ -83,10 +83,11 @@ class Boleto:                                                  #Cria a classe "B
         for line in self._transacoes:                          #Para cada line(cada item)
             print(line)                                        #
 
-    def valorTransacoesTotal(self):                            #Cria o método "valorTransacoesTotal"
+    def valorGastoTotal(self):                            #Cria o método "valorTransacoesTotal"
         soma = 0
         for line in self._transacoes:
-            soma = soma + float(line.valor)
+            if type(line) == Gasto:
+                soma = soma + float(line.valor)
 
         return round(soma, 2)
 
@@ -122,7 +123,7 @@ for item in teste.lista:
 
 #teste.mostraExtrato()
 
-#print(teste.valorTransacoesTotal())
+print(teste.valorGastoTotal())
 
 categoria = 'transporte'
 print(teste.valorTransacoesPorCategoria(categoria))
