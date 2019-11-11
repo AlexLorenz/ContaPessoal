@@ -34,7 +34,7 @@ def ola():
                            quantidade= extrato.quantidadeTransacoes(),
                            extrato = lista,
                            categoria=categoria3,
-                           valorCategoria=extrato.valorTransacoesPorCategoria(categoria1),
+                           valorCategoria=extrato.valorTransacoesPorCategoria(categoria3),
                            Data=data,
                            transacoesData= extrato.mostraTransacoesPorData(data))
 

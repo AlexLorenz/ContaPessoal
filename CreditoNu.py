@@ -110,7 +110,7 @@ class Boleto:                                                  #Cria a classe "B
 
 ############################ Teste ################################
 
-boleto = 'nubank-2019-07.csv'
+boleto = 'nubank-2019-03.csv'
 teste = Boleto(boleto)
 print(teste)
 
@@ -124,8 +124,8 @@ for item in teste.lista:
 
 #print(teste.valorTransacoesTotal())
 
-#categoria = 'restaurante'
-#print(teste.valorTransacoesPorCategoria(categoria))
+categoria = 'transporte'
+print(teste.valorTransacoesPorCategoria(categoria))
 
 #print(teste.quantidadeTransacoes())
 
