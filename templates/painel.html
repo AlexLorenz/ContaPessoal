@@ -66,8 +66,8 @@
                 {% for transacao in transacoesData %}
                     <tr>
                         <td>{{ transacao.data }} </td>
-                        <td> 1 </td>
-                        <td> 2 </td>
+                        <td>{{ transacao.categoria }}</td>
+                        <td>{{ transacao.referencia}}</td>
                         <td>{{ transacao.valor }}</td>
                     </tr>
                 {% endfor %}
