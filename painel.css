@@ -1,0 +1,38 @@
+main h1 {
+	font-size: 200%;
+	background-color: rgb(180,0,255);
+	color: rgb(255,255,255);
+	text-align: center;
+	font-family: "Arial";
+	padding: 20px
+	}
+h2 {
+	font-size: 125%;
+	}
+h3 {
+	font-size: 125%;
+	}
+p {
+    text-align: justify;
+}
+li {
+	background-color:  #D9E5E3
+}
+blockquote {
+    background-color: #D9E5E3;
+    padding: 16px;
+    border: 10px solid #C2CCCA;
+    width: 150px;
+    margin: 0px;
+}
+a {
+	background-color: #3C1D3D
+	color: #F2FFFC
+}
+footer {
+	background-color: #000
+	color: #F2FFFC;
+}
+nav a {
+    color: #F2FFFC;
+}
