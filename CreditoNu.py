@@ -135,17 +135,18 @@ boleto = 'nubank-2019-03.csv'
 teste = Boleto(boleto)
 #print(teste)
 
-for item in teste.lista:
-    print(item)
+#for item in teste.lista:
+#    print(item)
 
 #data = '2019-07-02'
 #print(teste.mostraTransacoesPorData(data))
 
+print(teste.lista)
 #teste.mostraExtrato()
 
 #print(teste.valorGastoTotal())
 #print(teste.valorPagoTotal())
-print(teste.maiorGasto())
+#print(teste.maiorGasto())
 
 #categoria = 'transporte'
 #print(teste.valorTransacoesPorCategoria(categoria))
