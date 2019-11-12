@@ -33,10 +33,6 @@ def pesquisar():
                            Data=data,
                            transacoesData= teste.mostraTransacoesPorData(data))
 
-#@app.route('/teste')
-#def ola():
-#    return render_template('painel.html',
-
 
 app.run()
 
