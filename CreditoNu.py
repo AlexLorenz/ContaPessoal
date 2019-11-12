@@ -131,8 +131,8 @@ class Boleto:                                                  #Cria a classe "B
 
 ############################ Teste ################################
 
-boleto = 'nubank-2019-03.csv'
-teste = Boleto(boleto)
+#boleto = 'nubank-2019-03.csv'
+#teste = Boleto(boleto)
 #print(teste)
 
 #for item in teste.lista:
@@ -141,7 +141,7 @@ teste = Boleto(boleto)
 #data = '2019-07-02'
 #print(teste.mostraTransacoesPorData(data))
 
-print(teste.lista)
+#print(teste.lista)
 #teste.mostraExtrato()
 
 #print(teste.valorGastoTotal())

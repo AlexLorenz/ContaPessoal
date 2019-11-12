@@ -13,8 +13,8 @@ app = Flask(__name__)
 data = 0
 teste = 0
 
-@app.route('/inicio')
-def novo():
+@app.route('/')
+def index():
     return render_template('inicio.html', titulo = 'Pesquisa')
 
 @app.route('/pesquisar', methods=['POST',])
@@ -22,7 +22,8 @@ def pesquisar():
     extrato = request.form['extrato']
     data = request.form['data']
     teste = Boleto(extrato)                                                          # Variável recebe a classe "Boleto" com a variável "boleto" passada como parâmentro
-    return render_template('painel.html',data = '2019-07',
+    return render_template('painel.html',
+                           data = '2019-07',
                            quantidade= teste.quantidadeTransacoes(),
                            extrato = teste.lista,
                            maiorGasto = teste.maiorGasto(),
@@ -34,7 +35,7 @@ def pesquisar():
                            transacoesData= teste.mostraTransacoesPorData(data))
 
 
-app.run()
+app.run(debug=True)
 
 
 #################### Teste ########################
