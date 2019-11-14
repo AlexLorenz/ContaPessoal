@@ -5,9 +5,7 @@
 		<meta charset="utf-8">                                      <!--Definindo ................-->
         <link rel="stylesheet" href="../static/bootstrap.css">
         <!--link rel="stylesheet" href="../static/bootstrap2.css"-->
-
 	</head>                                                         <!--Fim do cabeçalho-->
-
 	<body>                                                          <!--Início do corpo do texto-->
 		<main>
 			<h1>NuConta Crédito</h1>                                <!--Sub-título 1-->
@@ -15,14 +13,14 @@
 			<h3>Extrato Total de {{ data }} </h3>                   <!--Sub-título 2-->
 
             <table>                                                 <!--Início de uma tabela-->
-                <theard>                                            <!--Início do cabeçalho da tabela-->
+                <thead>                                            <!--Início do cabeçalho da tabela-->
 				    <tr>
 					    <th>Data</th>
 					    <th>Categoria</th>
 					    <th>Identificação</th>
 					    <th>Valor</th>
 				    </tr>
-			    </theard>                                          <!--Fim do cabeçalho da tabela-->
+			    </thead>                                          <!--Fim do cabeçalho da tabela-->
 			    <tbody>                                            <!--Início do corpo da tabela-->
                 {% for transacao in extrato %}
                         <tr>
