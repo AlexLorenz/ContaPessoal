@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request             #Importa a biblioteca do microframework Flask do diretório "flask"
+from flask import Flask, render_template, request, redirect   #Importa a biblioteca do microframework Flask do diretório "flask"
 from CreditoNu import Boleto                                  #Imposta a classe "Boleto" do diretório "CreditoNu"
 
 boleto = 'nubank-2019-04.csv'                                 #Especifíca o título do arquivo que será extraído
@@ -33,6 +33,7 @@ def pesquisar():
                            valorCategoria=teste.valorTransacoesPorCategoria(categoria3),
                            Data=data,
                            transacoesData= teste.mostraTransacoesPorData(data))
+    #return redirect('/')
 
 
 app.run(debug=True)
