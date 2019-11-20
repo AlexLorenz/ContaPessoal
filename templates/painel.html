@@ -14,12 +14,12 @@
             </theard>                                                                    <!--Fim do cabeçalho da tabela-->
             <tbody>                                                                      <!--Início do corpo da tabela-->
             {% for transacao in extrato %}
-                    <tr>
-                        <td>{{ transacao.data }}</td>
-                        <td>{{ transacao.categoria }}</td>
-                        <td>{{ transacao.referencia }}</td>
-                        <td>{{ transacao.valor }}</td>
-                    </tr>
+                <tr>
+                    <td>{{ transacao.data }}</td>
+                    <td>{{ transacao.categoria }}</td>
+                    <td>{{ transacao.referencia }}</td>
+                    <td>{{ transacao.valor }}</td>
+                </tr>
             {% endfor %}
             </tbody>                                                                     <!--Fim do corpo da tabela-->
         </table>                                                                         <!--Fim de uma tabela-->

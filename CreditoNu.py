@@ -1,6 +1,7 @@
 from gasto import Gasto                                         #Importa a classe "Gasto" do diretório "gasto"
 from pagamento import Pagamento                                 #Importa a classe "Pagamento" do diretório "pagamento"
 
+
 class Boleto:                                                  #Cria a classe "Boleto"
     def __init__(self, extrato):                                #Cria o método construtor solicitando o parâmetro 'extrato'
         self._extrato = extrato

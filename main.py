@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect   #Importa a biblioteca do microframework Flask do diretório "flask"
+from flask import Flask, render_template, request, redirect, session   #Importa a biblioteca do microframework Flask do diretório "flask"
 from CreditoNu import Boleto                                  #Imposta a classe "Boleto" do diretório "CreditoNu"
 
 boleto = 'nubank-2019-04.csv'                                 #Especifíca o título do arquivo que será extraído
@@ -16,6 +16,18 @@ teste = 0
 @app.route('/')
 def index():
     return render_template('inicio.html', titulo = 'Pesquisa')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/autenticar', methods=['POST',])
+def autenticar():
+    if 'mestra' == request.form['senha']:
+        session['usuario_logado'] = request.form['usuario']
+        return redirect('/')
+    else:
+        return redirect('/login')
 
 @app.route('/pesquisar', methods=['POST',])
 def pesquisar():
