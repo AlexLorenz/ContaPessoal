@@ -21,11 +21,11 @@ class Gasto:                                                     #Cria a classe 
     def valor(self):                                             #Cria o método "valor"
         return float(self._valor)
 
-    def __str__(self):                                           #Chama o metodo builtin "__str__" que retorna algo quando a classe é chamada
-        return self._data + ' | ' \
-             + self._categoria + ' | ' \
-             + self._referencia + ' | ' \
-             + self._valor
+    #def __str__(self):                                           #Chama o metodo builtin "__str__" que retorna algo quando a classe é chamada
+    #    return self._data + ' | ' \
+    #         + self._categoria + ' | ' \
+    #         + self._referencia + ' | ' \
+    #         + self._valor
 
 ################### Teste ########################
 
