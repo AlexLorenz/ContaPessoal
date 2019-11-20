@@ -1,18 +1,18 @@
 {% extends "template.html" %}
 {% block conteudo %}
     <main>
-        <h1>NuConta Crédito</h1>                                               <!--Sub-título 1-->
-        <h3>Extrato Total de {{ data }} </h3>                                  <!--Sub-título 2-->
-        <table class="table table-striped table-responsive table-bordered">    <!--Início de uma tabela-->
-            <theard>                                                           <!--Início do cabeçalho da tabela-->
+        <h1>NuConta Crédito</h1>                                                         <!--Sub-título 1-->
+        <h3>Extrato Total de {{ data }} </h3>                                            <!--Sub-título 2-->
+        <table class="table table-striped table-responsive table-bordered">              <!--Início de uma tabela-->
+            <theard>                                                                     <!--Início do cabeçalho da tabela-->
                 <tr>
                     <th>Data</th>
                     <th>Categoria</th>
                     <th>Identificação</th>
                     <th>Valor</th>
                 </tr>
-            </theard>                                                          <!--Fim do cabeçalho da tabela-->
-            <tbody>                                                            <!--Início do corpo da tabela-->
+            </theard>                                                                    <!--Fim do cabeçalho da tabela-->
+            <tbody>                                                                      <!--Início do corpo da tabela-->
             {% for transacao in extrato %}
                     <tr>
                         <td>{{ transacao.data }}</td>
@@ -21,10 +21,10 @@
                         <td>{{ transacao.valor }}</td>
                     </tr>
             {% endfor %}
-            </tbody>                                                           <!--Fim do corpo da tabela-->
-        </table>                                                               <!--Fim de uma tabela-->
+            </tbody>                                                                     <!--Fim do corpo da tabela-->
+        </table>                                                                         <!--Fim de uma tabela-->
         <p>Segundo <a href="https:\\www.nubank.com.br">Nubank</a></p>
-        <h3>Quantidade de Transações do Mês</h3>                               <!--Sub-título 3-->
+        <h3>Quantidade de Transações do Mês</h3>                                         <!--Sub-título 3-->
             <p>{{ quantidade }}</p>
         <h3>Maior Gasto do mês</h3>
             <table class="table table-striped table-responsive table-bordered">

@@ -111,7 +111,7 @@ class Boleto:                                                  #Cria a classe "B
 
         return gasto
 
-    def valorTransacoesPorCategoria(self, categoria):         #Cria o método "valorTransacoesPorCategoria" e recebe "categoria" como parâmetro
+    def valorTransacoesPorCategoria(self, categoria):                                    #Cria o método "valorTransacoesPorCategoria" e recebe "categoria" como parâmetro
         soma = 0
 
         for line in self._transacoes:                         #Para cada line(cada item) na Lista "transacoes"
