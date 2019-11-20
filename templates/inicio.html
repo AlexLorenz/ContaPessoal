@@ -1,36 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ContaPessoal</title>
-    <link rel="stylesheet" href="../static/bootstrap.css">
-    <!--link rel="stylesheet" href="../static/bootstrap2.css"-->
-</head>
-<body>
+{% extends "template.html" %}
+{% block conteudo %}
     <div class="container">
-      <div class="page-header">
-          <h1>{{ titulo }}</h1>
-      </div>
-        <p>nubank-2019-02.csv | 2019-01-19</p>
-        <p>nubank-2019-03.csv | 2019-02-16</p>
-        <p>nubank-2019-04.csv | 2019-03-16</p>
-        <p>nubank-2019-05.csv | 2019-04-17</p>
-        <p>nubank-2019-06.csv | 2019-05-29</p>
-        <p>nubank-2019-07.csv | 2019-07-02</p>
-      <form action="/pesquisar", method="post">
-        <fieldset>
-          <div class="form-group">
-            <label for="nome">Extrato</label>
-            <input type="text" id="nome" name="extrato" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="categoria">Data</label>
-            <input type="text" id="categoria" name="data" class="form-control">
-          </div>
-          <button type="submit" class="btn btn-primary btn-salvar">Salvar</button>
-        </fieldset>
-      </form>
+        <div class="page-header">
+            <h1>{{ titulo }}</h1>
+        </div>
+            <p>nubank-2019-02.csv | 2019-01-19</p>
+            <p>nubank-2019-03.csv | 2019-02-16</p>
+            <p>nubank-2019-04.csv | 2019-03-16</p>
+            <p>nubank-2019-05.csv | 2019-04-17</p>
+            <p>nubank-2019-06.csv | 2019-05-29</p>
+            <p>nubank-2019-07.csv | 2019-07-02</p>
+        <form action="/pesquisar", method="post">
+            <fieldset>
+                <div class="form-group">
+                    <label for="nome">Extrato</label>
+                    <input type="text" id="nome" name="extrato" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="categoria">Data</label>
+                    <input type="text" id="categoria" name="data" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary btn-salvar">Salvar</button>
+            </fieldset>
+        </form>
     </div>
-</body>
-</html>
+{% endblock %}

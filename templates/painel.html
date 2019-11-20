@@ -1,92 +1,61 @@
-<!DOCTYPE html>
-<html>                                                              <!--Início do código HTML-->
-	<head>                                                          <!--Início do cabeçalho-->
-		<title>NuPython</title>                                     <!--Título-->
-		<meta charset="utf-8">                                      <!--Definindo ................-->
-        <link rel="stylesheet" href="../static/bootstrap.css">
-        <!--link rel="stylesheet" href="../static/bootstrap2.css"-->
-	</head>                                                         <!--Fim do cabeçalho-->
-	<body>                                                          <!--Início do corpo do texto-->
-		<main>
-			<h1>NuConta Crédito</h1>                                <!--Sub-título 1-->
-
-			<h3>Extrato Total de {{ data }} </h3>                   <!--Sub-título 2-->
-
-            <table>                                                 <!--Início de uma tabela-->
-                <theard>                                            <!--Início do cabeçalho da tabela-->
-				    <tr>
-					    <th>Data</th>
-					    <th>Categoria</th>
-					    <th>Identificação</th>
-					    <th>Valor</th>
-				    </tr>
-			    </theard>                                          <!--Fim do cabeçalho da tabela-->
-			    <tbody>                                            <!--Início do corpo da tabela-->
-                {% for transacao in extrato %}
-                        <tr>
-                            <td>{{ transacao.data }}</td>
-                            <td>{{ transacao.categoria }}</td>
-                            <td>{{ transacao.referencia }}</td>
-                            <td>{{ transacao.valor }}</td>
-                        </tr>
-                {% endfor %}
-			    </tbody>                                                           <!--Fim do corpo da tabela-->
-            </table>                                                               <!--Fim de uma tabela-->
-
-
-			<p>Segundo <a href="https:\\www.nubank.com.br">Nubank</a></p>
-
-            <h3>Quantidade de Transações do Mês</h3>                               <!--Sub-título 3-->
-
-				<p>{{ quantidade }}</p>
-
-            <h3>Maior Gasto do mês</h3>
-
-                <p>{{ maiorGasto }}</p>
-
-            <h3>Valor total gasto</h3>
-
-                <p>{{ valorGastoTotal }}</p>
-
-            <h3>Valor total pago</h3>
-
-                <p>{{ valorPagoTotal }}</p>
-
-			<h3>Valor Total da Categoria {{ categoria }}</h3>                      <!--Sub-título 4-->
-
-				<p> {{ valorCategoria }}</p>
-
-			<h3>Transações referentes a {{ Data }}</h3>                            <!--Subtítulo 5-->
-            <table>                                                                <!--Início de uma tabela-->
-                <thead>                                                            <!--Início do cabeçalho da tabela-->
+{% extends "template.html" %}
+{% block conteudo %}
+    <main>
+        <h1>NuConta Crédito</h1>                                                                                        <!--Sub-título 1-->
+        <h3>Extrato Total de {{ data }} </h3>                                                                           <!--Sub-título 2-->
+        <table class="table table-striped table-responsive table-bordered">                                             <!--Início de uma tabela-->
+            <theard>                                                                                                    <!--Início do cabeçalho da tabela-->
+                <tr>
+                    <th>Data</th>
+                    <th>Categoria</th>
+                    <th>Identificação</th>
+                    <th>Valor</th>
+                </tr>
+            </theard>                                                                                                   <!--Fim do cabeçalho da tabela-->
+            <tbody>                                                                                                     <!--Início do corpo da tabela-->
+            {% for transacao in extrato %}
                     <tr>
-                        <th> Data </th>
-                        <th> Categoria </th>
-                        <th> Referência </th>
-                        <th> Valor </th>
-                    </tr>
-                </thead>                                                           <!--Fim do cabeçalho da tabela-->
-                <tbody>                                                            <!--Início do corpo da tabela-->
-                {% for transacao in transacoesData %}
-                    <tr>
-                        <td>{{ transacao.data }} </td>
+                        <td>{{ transacao.data }}</td>
                         <td>{{ transacao.categoria }}</td>
-                        <td>{{ transacao.referencia}}</td>
+                        <td>{{ transacao.referencia }}</td>
                         <td>{{ transacao.valor }}</td>
                     </tr>
-                {% endfor %}
-                </tbody>                                                           <!--Fim do corpo da tabela-->
-            </table>                                                               <!--Fim de uma tabela-->
-		</main>
-		<nav>                                                                      <!--Início da caixa de navegação-->
-			<h1>Alex Lorenz</h1>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Teste</a></li>
-			</ul>	
-		</nav>                                                                      <!--Fim da caixa de navegação-->
-		<footer>                                                                    <!--Início do rodapé-->
-			&copy; Alex Lorenz 2019
-		</footer>                                                                   <!--Fim do rodapé-->
-	</body>                                                                         <!--Fim do corpo do texto-->
-</html>                                                                             <!--Fim do código HTML-->
+            {% endfor %}
+            </tbody>                                                           <!--Fim do corpo da tabela-->
+        </table>                                                               <!--Fim de uma tabela-->
+        <p>Segundo <a href="https:\\www.nubank.com.br">Nubank</a></p>
+        <h3>Quantidade de Transações do Mês</h3>                               <!--Sub-título 3-->
+            <p>{{ quantidade }}</p>
+        <h3>Maior Gasto do mês</h3>
+            <table class="table table-striped table-responsive table-bordered">
+                <td>{{ maiorGasto }}</td>
+            </table>
+        <h3>Valor total gasto</h3>
+            <p>{{ valorGastoTotal }}</p>
+        <h3>Valor total pago</h3>
+            <p>{{ valorPagoTotal }}</p>
+        <h3>Valor Total da Categoria {{ categoria }}</h3>                      <!--Sub-título 4-->
+            <p> {{ valorCategoria }}</p>
+        <h3>Transações referentes a {{ Data }}</h3>                            <!--Subtítulo 5-->
+        <table class="table table-striped table-responsive table-bordered">                                                                <!--Início de uma tabela-->
+            <thead>                                                            <!--Início do cabeçalho da tabela-->
+                <tr>
+                    <th> Data </th>
+                    <th> Categoria </th>
+                    <th> Referência </th>
+                    <th> Valor </th>
+                </tr>
+            </thead>                                                           <!--Fim do cabeçalho da tabela-->
+            <tbody>                                                            <!--Início do corpo da tabela-->
+            {% for transacao in transacoesData %}
+                <tr>
+                    <td>{{ transacao.data }} </td>
+                    <td>{{ transacao.categoria }}</td>
+                    <td>{{ transacao.referencia}}</td>
+                    <td>{{ transacao.valor }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>                                                                                <!--Fim do código HTML-->
+        </table>
+    </main>
+{% endblock %}
