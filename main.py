@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect, session           #Importa a biblioteca do microframework Flask do diretório "flask"
 from CreditoNu import Boleto                                                   #Imposta a classe "Boleto" do diretório "CreditoNu"
-
 boleto = 'nubank-2019-04.csv'                                                  #Especifíca o título do arquivo que será extraído
 data = '2019-03-09'                                                            #Especifíca a data que será pesquisada
 
