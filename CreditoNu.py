@@ -2,7 +2,7 @@ from gasto import Gasto                                         #Importa a class
 from pagamento import Pagamento                                 #Importa a classe "Pagamento" do diretório "pagamento"
 
 
-class Boleto:                                                  #Cria a classe "Boleto"
+class Boleto:                                                   #Cria a classe "Boleto"
     def __init__(self, extrato):                                #Cria o método construtor solicitando o parâmetro 'extrato'
         self._extrato = extrato
         data = open(extrato, 'r')                               #A variável "data" recebe o arquivo em mode de leitura(read)
@@ -10,11 +10,9 @@ class Boleto:                                                  #Cria a classe "B
         boleto = data.read()                                    #Variável boleto recebe a
         data.close()
 
-
         boleto = boleto.replace(',,', ',')                      #Troca ",," por ","
         boleto = boleto.replace('educaÃ§Ã£o', 'educacao')       #Troca "educaÃ§Ã£o" por "educacao"
         boleto = boleto.replace('serviÃ§os', 'servicos')        #Troca "serviÃ§os" por "servicos"
-
 
         listaBoleto = boleto.split('\n')                        #Variável "listaBoleto" recebe "boleto" separado por "\n", o que torna "listaBoleto" uma Lista
         #print(listaBoleto)
@@ -84,7 +82,7 @@ class Boleto:                                                  #Cria a classe "B
         for line in self._transacoes:                          #Para cada line(cada item)
             print(line)                                        #
 
-    def valorGastoTotal(self):                            #Cria o método "valorTransacoesTotal"
+    def valorGastoTotal(self):                                 #Cria o método "valorTransacoesTotal"
         soma = 0
         for line in self._transacoes:
             if type(line) == Gasto:
